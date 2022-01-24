@@ -1,0 +1,37 @@
+Первое ДЗ 
+Linux terminal (GitBash) commands
+
+$ pwd										                                                    1) посмотреть, где я.
+$ mkdir	foldername								                                          2) создать папку.
+$ cd foldername									                                            3) зайти в папку.
+$ mkdir	foldername foldername foldername					                          4) создать 3 папки.
+$ cd foldername									                                            5) зайти в любую папку.
+$ touch	filename.txt filename.txt filename.txt filename.json filename.json	6) создать 5 файлов (3 txt, 2 json).
+$ mkdir	foldername foldername foldername					                          7) создать 3 папки.
+$ ls										                                                    8) вывести список содержимого папки.
+$ vim filename.txt								                                          9) + открыть любой txt файл.
+i										                                                        10) + написать туда что-нибудь, любой текст.
+Esc :wq										                                                  11) + сохранить и выйти.
+$ cd ..										                                                  12) выйти из папки на уровень выше.
+$ mv ./foldername/{filename.extension,filename.extension} ./foldername		  13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+$ cp ./foldername/{filename.extension,filename.extension} ./foldername		  14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+$ find ./ -name filename.extension						                              15) найти файл по имени
+$ grep "symbols" ./foldername/filename.txt					                        16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+$ head -number_of_lines./foldername/filename.extension				              17) вывести несколько первых строк из текстового файла.
+$ tail -number_of_lines./foldername/filename.extension				              18) вывести несколько последних строк из текстового файла.
+$ less filename.txt								                                          19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+$ date +'%A %d/%m/%Y %H:%M'							                                    20) вывести дату и время
+
+======================================================================================================================================================================
+
+Задание *
+$ curl http://162.55.220.72:5005/terminal-hw-request				                1) отправить http запрос на сервер http://162.55.220.72:5005/terminal-hw-request.
+
+#!/bin/bash									                                                2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13.
+cd /c:/qa/group_26/
+mkdir scriptfolder1 scriptfolder2 scriptfolder3
+cd scriptfolder3
+touch scriptfiletxt1.txt scriptfiletxt2.txt scriptfiletxt3.txt scriptfilejson1.json scriptfilejson2.json
+mkdir scriptfolder3-1 scriptfolder3-2 scriptfolder3-3
+ls
+mv ./{scriptfiletxt3.txt,scriptfilejson2.json} ../scriptfolder2/
