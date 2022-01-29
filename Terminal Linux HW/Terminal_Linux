@@ -4,7 +4,7 @@ Linux terminal (GitBash) commands
 $ pwd										                                                    1) посмотреть, где я.
 $ mkdir	foldername								                                          2) создать папку.
 $ cd foldername									                                            3) зайти в папку.
-$ mkdir	foldername foldername foldername					                          4) создать 3 папки.
+$ mkdir	foldername foldername foldername					4) создать 3 папки.
 $ cd foldername									                                            5) зайти в любую папку.
 $ touch	filename.txt filename.txt filename.txt filename.json filename.json	6) создать 5 файлов (3 txt, 2 json).
 $ mkdir	foldername foldername foldername					                          7) создать 3 папки.
