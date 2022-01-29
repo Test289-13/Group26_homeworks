@@ -1,21 +1,21 @@
 Первое ДЗ 
 Linux terminal (GitBash) commands
 
-$ pwd										                                                    1) посмотреть, где я.
-$ mkdir	foldername								                                          2) создать папку.
-$ cd foldername									                                            3) зайти в папку.
+$ pwd										1) посмотреть, где я.
+$ mkdir	foldername								2) создать папку.
+$ cd foldername									3) зайти в папку.
 $ mkdir	foldername foldername foldername					4) создать 3 папки.
-$ cd foldername									                                            5) зайти в любую папку.
+$ cd foldername									5) зайти в любую папку.
 $ touch	filename.txt filename.txt filename.txt filename.json filename.json	6) создать 5 файлов (3 txt, 2 json).
-$ mkdir	foldername foldername foldername					                          7) создать 3 папки.
-$ ls										                                                    8) вывести список содержимого папки.
-$ vim filename.txt								                                          9) + открыть любой txt файл.
-i										                                                        10) + написать туда что-нибудь, любой текст.
-Esc :wq										                                                  11) + сохранить и выйти.
-$ cd ..										                                                  12) выйти из папки на уровень выше.
-$ mv ./foldername/{filename.,filename.} ./foldername		                    13) переместить любые 2 файла, которые вы создали, в любую другую папку.
-$ cp ./foldername/{filename.,filename.} ./foldername                  		  14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
-$ find ./ -name filename.extension						                              15) найти файл по имени
+$ mkdir	foldername foldername foldername					7) создать 3 папки.
+$ ls										8) вывести список содержимого папки.
+$ vim filename.txt								9) + открыть любой txt файл.
+i										10) + написать туда что-нибудь, любой текст.
+Esc :wq										11) + сохранить и выйти.
+$ cd ..										12) выйти из папки на уровень выше.
+$ mv ./foldername/{filename.,filename.} ./foldername		                13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+$ cp ./foldername/{filename.,filename.} ./foldername                  		14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+$ find ./ -name filename.extension						15) найти файл по имени
     					                                                              16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
 $ grep "any" ./foldername/filename.txt                                           вывод строк содержащие any (регистрозависима) в файле.
 $ grep -r 'any' /c/qa/                                                           вывод строк с путем и названиями файлов содержащих any (регистрозависима) во всех файлах папки и подпапок.
