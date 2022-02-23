@@ -1,0 +1,149 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "person": {
+                "u_age": 30,
+                "u_name": [
+                    "Dmitry",
+                    1000,
+                    30
+                ],
+                "u_salary_1_5_year": 4000
+            },
+            "qa_salary_after_12_months": 2900.0,
+            "qa_salary_after_6_months": 2000,
+            "start_qa_salary": 1000
+        }
+    ],
+    "required": [
+        "person",
+        "qa_salary_after_12_months",
+        "qa_salary_after_6_months",
+        "start_qa_salary"
+    ],
+    "properties": {
+        "person": {
+            "$id": "#/properties/person",
+            "type": "object",
+            "title": "The person schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "u_age": 30,
+                    "u_name": [
+                        "Dmitry",
+                        1000,
+                        30
+                    ],
+                    "u_salary_1_5_year": 4000
+                }
+            ],
+            "required": [
+                "u_age",
+                "u_name",
+                "u_salary_1_5_year"
+            ],
+            "properties": {
+                "u_age": {
+                    "$id": "#/properties/person/properties/u_age",
+                    "type": "integer",
+                    "title": "The u_age schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        30
+                    ]
+                },
+                "u_name": {
+                    "$id": "#/properties/person/properties/u_name",
+                    "type": "array",
+                    "title": "The u_name schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [
+                        [
+                            "Dmitry",
+                            1000
+                        ]
+                    ],
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/person/properties/u_name/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/person/properties/u_name/items/anyOf/0",
+                                "type": "string",
+                                "title": "The first anyOf schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "Dmitry"
+                                ]
+                            },
+                            {
+                                "$id": "#/properties/person/properties/u_name/items/anyOf/1",
+                                "type": "integer",
+                                "title": "The second anyOf schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": 0,
+                                "examples": [
+                                    1000,
+                                    30
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "u_salary_1_5_year": {
+                    "$id": "#/properties/person/properties/u_salary_1_5_year",
+                    "type": "integer",
+                    "title": "The u_salary_1_5_year schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        4000
+                    ]
+                }
+            },
+            "additionalProperties": true
+        },
+        "qa_salary_after_12_months": {
+            "$id": "#/properties/qa_salary_after_12_months",
+            "type": "number",
+            "title": "The qa_salary_after_12_months schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0.0,
+            "examples": [
+                2900.0
+            ]
+        },
+        "qa_salary_after_6_months": {
+            "$id": "#/properties/qa_salary_after_6_months",
+            "type": "integer",
+            "title": "The qa_salary_after_6_months schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                2000
+            ]
+        },
+        "start_qa_salary": {
+            "$id": "#/properties/start_qa_salary",
+            "type": "integer",
+            "title": "The start_qa_salary schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1000
+            ]
+        }
+    },
+    "additionalProperties": true
+}
