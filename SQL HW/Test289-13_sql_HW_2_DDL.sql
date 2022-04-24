@@ -83,7 +83,7 @@ SELECT *
 CREATE TABLE salary (
     PRIMARY KEY (id),
     id             SERIAL,
-    monthly_salary INT NOT NULL
+    monthly_salary INT     NOT NULL
 );
 
 INSERT INTO salary (monthly_salary)
@@ -110,8 +110,8 @@ SELECT *
 CREATE TABLE employee_salary (
     PRIMARY KEY (id),
     id          SERIAL,
-    employee_id INT NOT NULL UNIQUE,
-    salary_id   INT NOT NULL
+    employee_id INT     NOT NULL UNIQUE,
+    salary_id   INT     NOT NULL
 );
 
 INSERT INTO employee_salary (employee_id, salary_id)
@@ -163,7 +163,7 @@ SELECT *
 CREATE TABLE roles (
     PRIMARY KEY (id),
     id        SERIAL,
-    role_name INT NOT NULL UNIQUE
+    role_name INT     NOT NULL UNIQUE
 );
 
 ALTER TABLE roles
@@ -195,8 +195,8 @@ VALUES ('Junior Python developer'),
 CREATE TABLE roles_employee (
     PRIMARY KEY (id),
     id          SERIAL,
-    employee_id INT NOT NULL UNIQUE,
-    role_id     INT NOT NULL
+    employee_id INT     NOT NULL UNIQUE,
+    role_id     INT     NOT NULL
 );
 
 INSERT INTO roles_employee (employee_id, role_id)
