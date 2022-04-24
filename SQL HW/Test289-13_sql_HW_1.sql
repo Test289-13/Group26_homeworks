@@ -29,7 +29,7 @@ SELECT name FROM students WHERE name LIKE '%a%';
 -- 13. Вывести пользователей которые были созданы 2021-07-12 00:00:00
 SELECT name FROM students WHERE created_on = '2021-07-12 00:00:00';
 -- 14. Вывести пользователей которые были созданы 2021-07-12 00:00:00 и имеют пароль 1m313
-SELECT name FROM students WHERE created_on = '2021-07-12 00:00:00' AND password='1m313';
+SELECT name FROM students WHERE created_on = '2021-07-12 00:00:00' AND password = '1m313';
 -- 15. Вывести пользователей которые были созданы 2021-07-12 00:00:00 и у которых в имени есть слово Andrey
 SELECT name FROM students WHERE created_on = '2021-07-12 00:00:00' AND name LIKE '%Andrey%';
 -- 16. Вывести пользователей которые были созданы 2021-07-12 00:00:00 и у которых в имени есть цифра 8
