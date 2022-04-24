@@ -35,7 +35,8 @@ SELECT monthly_salary
        
        LEFT JOIN employees
        ON employees.id = employee_salary.employee_id
- WHERE employee_id IS NULL AND monthly_salary < 2000;
+ WHERE employee_id IS NULL
+   AND monthly_salary < 2000;
 
 -- 5. Найти всех работников кому не начислена ЗП.
 SELECT employee_name
