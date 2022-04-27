@@ -3,7 +3,6 @@ SELECT employee_name, monthly_salary
   FROM employees
        INNER JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-
        INNER JOIN salary
        ON employee_salary.salary_id = salary.id;
 
@@ -12,7 +11,6 @@ SELECT employee_name, monthly_salary
   FROM employees
        INNER JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-       
        INNER JOIN salary
        ON employee_salary.salary_id = salary.id
  WHERE monthly_salary < 2000;
@@ -22,7 +20,6 @@ SELECT monthly_salary
   FROM salary
        FULL JOIN employee_salary
        ON salary.id = employee_salary.salary_id
-
        LEFT JOIN employees
        ON employees.id = employee_salary.employee_id
  WHERE employee_id IS NULL;
@@ -32,7 +29,6 @@ SELECT monthly_salary
   FROM salary
        FULL JOIN employee_salary
        ON salary.id = employee_salary.salary_id
-       
        LEFT JOIN employees
        ON employees.id = employee_salary.employee_id
  WHERE employee_id IS NULL
@@ -43,7 +39,6 @@ SELECT employee_name
   FROM employees
        FULL JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-       
        FULL JOIN salary
        ON employee_salary.salary_id = salary.id
  WHERE monthly_salary IS NULL
@@ -54,7 +49,6 @@ SELECT employee_name, role_name
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id;
 
@@ -63,7 +57,6 @@ SELECT employee_name, role_name
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
  WHERE role_name LIKE '%Java developer%';
@@ -73,7 +66,6 @@ SELECT employee_name, role_name
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
  WHERE role_name LIKE '%Python developer%';
@@ -83,7 +75,6 @@ SELECT employee_name, role_name
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
  WHERE role_name LIKE '%QA engineer';
@@ -93,7 +84,6 @@ SELECT employee_name, role_name
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
  WHERE role_name LIKE '%Manual QA engineer';
@@ -103,7 +93,6 @@ SELECT employee_name, role_name
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
  WHERE role_name LIKE '%Automation QA engineer';
@@ -113,13 +102,10 @@ SELECT employee_name, role_name, monthly_salary
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
-       
        FULL JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-       
        FULL JOIN salary
        ON employee_salary.salary_id = salary.id
  WHERE role_name LIKE 'Junior%';
@@ -129,13 +115,10 @@ SELECT employee_name, role_name, monthly_salary
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
-       
        FULL JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-       
        FULL JOIN salary
        ON employee_salary.salary_id = salary.id
  WHERE role_name LIKE 'Middle%';
@@ -145,13 +128,10 @@ SELECT employee_name, role_name, monthly_salary
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
-
        FULL JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-
        FULL JOIN salary
        ON employee_salary.salary_id = salary.id
  WHERE role_name LIKE 'Senior%';
@@ -161,13 +141,10 @@ SELECT role_name, monthly_salary
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-
        FULL JOIN roles
        ON roles_employee.role_id = roles.id
-
        FULL JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-
        LEFT JOIN salary
        ON employee_salary.salary_id = salary.id
  WHERE role_name LIKE '%Java developer';
@@ -177,13 +154,10 @@ SELECT role_name, monthly_salary
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-
        FULL JOIN roles
        ON roles_employee.role_id = roles.id
-
        FULL JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-
        LEFT JOIN salary
        ON employee_salary.salary_id = salary.id
  WHERE role_name LIKE '%Python developer';
@@ -193,13 +167,10 @@ SELECT employee_name, monthly_salary
   FROM employees
        LEFT JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-
        FULL JOIN roles
        ON roles_employee.role_id = roles.id
-
        LEFT JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-
        FULL JOIN salary
        ON employee_salary.salary_id = salary.id
  WHERE role_name LIKE '%Junior Python developer%';
@@ -209,13 +180,10 @@ SELECT employee_name, monthly_salary
   FROM employees
        LEFT JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
-
        LEFT JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-       
        LEFT JOIN salary
        ON employee_salary.salary_id = salary.id
  WHERE role_name LIKE '%Middle JavaScript developer';
@@ -225,13 +193,10 @@ SELECT employee_name, monthly_salary
   FROM employees
        INNER JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        FULL JOIN roles
        ON roles_employee.role_id = roles.id
-       
        LEFT JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-       
        LEFT JOIN salary
        ON employee_salary.salary_id = salary.id
  WHERE role_name LIKE '%Senior Java developer';
@@ -241,13 +206,10 @@ SELECT role_name, monthly_salary
   FROM employees
        FULL JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-       
        FULL JOIN salary
        ON employee_salary.salary_id = salary.id
-       
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
  WHERE role_name LIKE '%Junior% %QA%';
@@ -257,13 +219,10 @@ SELECT role_name, AVG(monthly_salary)
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
-       
        LEFT JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-       
        LEFT JOIN salary
        ON employee_salary.salary_id = salary.id
  WHERE role_name LIKE '%Junior%'
@@ -274,13 +233,10 @@ SELECT role_name, SUM(monthly_salary)
   FROM employees
        FULL JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-       
        FULL JOIN salary
        ON employee_salary.employee_id = salary.id
-       
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
  WHERE role_name LIKE '%JavaScript developer%'
@@ -291,13 +247,10 @@ SELECT MIN(monthly_salary) AS "min of QAeng salary"
   FROM employees
        FULL JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-       
        FULL JOIN salary
        ON employee_salary.salary_id = salary.id
-       
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
  WHERE role_name LIKE '%QA engineer%';
@@ -307,13 +260,10 @@ SELECT MAX(monthly_salary) AS "max of QAeng salary"
   FROM employees
        FULL JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-       
        FULL JOIN salary
        ON employee_salary.salary_id = salary.id
-       
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
  WHERE role_name LIKE '%QA engineer%';
@@ -323,7 +273,6 @@ SELECT role_name, COUNT(role_name)
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
  WHERE role_name LIKE '%QA engineer%'
@@ -334,7 +283,6 @@ SELECT role_name, COUNT(role_name)
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
  WHERE role_name LIKE '%Middle%'
@@ -345,7 +293,6 @@ SELECT role_name, COUNT(role_name)
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
  WHERE role_name LIKE '%developer%'
@@ -356,13 +303,10 @@ SELECT SUM(monthly_salary) AS "dev's payroll"
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.role_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
-       
        LEFT JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-       
        LEFT JOIN salary
        ON employee_salary.salary_id = salary.id
  WHERE role_name LIKE '%developer%';
@@ -372,13 +316,10 @@ SELECT employee_name, role_name, monthly_salary
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
-       
        LEFT JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-       
        LEFT JOIN salary
        ON employee_salary.salary_id = salary.id
  ORDER BY monthly_salary ASC;
@@ -388,13 +329,10 @@ SELECT employee_name, role_name, monthly_salary
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
-       
        LEFT JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-       
        LEFT JOIN salary
        ON employee_salary.salary_id = salary.id
  WHERE monthly_salary BETWEEN 1700 AND 2300
@@ -405,13 +343,10 @@ SELECT employee_name, role_name, monthly_salary
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
-       
        LEFT JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-       
        LEFT JOIN salary
        ON employee_salary.salary_id = salary.id
  WHERE monthly_salary < 2300
@@ -422,13 +357,10 @@ SELECT employee_name, role_name, monthly_salary
   FROM employees
        FULL JOIN roles_employee
        ON employees.id = roles_employee.employee_id
-       
        INNER JOIN roles
        ON roles_employee.role_id = roles.id
-       
        LEFT JOIN employee_salary
        ON employees.id = employee_salary.employee_id
-       
        LEFT JOIN salary
        ON employee_salary.salary_id = salary.id
  WHERE monthly_salary IN (1100, 1500, 2000)
